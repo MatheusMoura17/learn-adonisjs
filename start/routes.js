@@ -17,4 +17,5 @@
 const Route = use('Route')
 
 Route.get('/', 'IndexController.index')
-Route.post('/post/create', 'PostController.create')
+
+Route.resource('posts', 'PostController').apiOnly()
